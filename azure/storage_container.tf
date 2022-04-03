@@ -11,5 +11,5 @@ resource "azurerm_storage_account" "tenable_cs_demo_storage_account" {
 resource "azurerm_storage_container" "tenable_cs_demo_storage_container" {
   name                  = "tenablecsdemostorctnr"
   storage_account_name  = azurerm_storage_account.tenable_cs_demo_storage_account.name
-  container_access_type = "blob"
+  container_access_type = "private"
 }
