@@ -13,7 +13,7 @@ resource "azurerm_network_security_rule" "ssh_security_rule" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "22"
-  source_address_prefix       = "0.0.0.0/0"
+  source_address_prefix       = "<cidr>"
   destination_address_prefix  = "*"
   resource_group_name         = azurerm_resource_group.tenable_cs_demo_rg.name
   network_security_group_name = azurerm_network_security_group.tenable_cs_demo_sg_ssh.name
